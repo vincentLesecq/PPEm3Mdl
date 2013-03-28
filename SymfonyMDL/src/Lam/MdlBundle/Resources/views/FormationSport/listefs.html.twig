@@ -1,0 +1,18 @@
+{% extends 'LamMdlBundle::layout.html.twig' %}
+
+{% block body %}
+
+{% set num=1 %}
+
+<h2>Il y a {{listeformationsport|length}} formations sport/médecine : </h2>
+
+{% for uneFs in listeformationsport %}
+		<h2>- Formation n° {{ num }} : </h2> 
+		<p>*<a href="{{ path('LamMdlBundle_contenuformationsport', { 'num': uneFs.id }) }}"> {{ uneFs.Titre }}  </a>  , et  
+                    <a href="{{ path('LamMdlBundle_datesstagesport', { 'num': uneFs.id }) }}"> Les Dates de Stages </a></p>
+		
+        {% set num=num+1 %}
+	{% endfor %}
+
+
+{% endblock %}

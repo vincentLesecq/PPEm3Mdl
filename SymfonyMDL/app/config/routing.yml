@@ -1,0 +1,8 @@
+LamMdlBundle:
+    resource: "@LamMdlBundle/Resources/config/routing.yml"
+    prefix:   /Mdl
+
+# Internal routing configuration to handle ESI
+#_internal:
+#   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#   prefix:   /_internal

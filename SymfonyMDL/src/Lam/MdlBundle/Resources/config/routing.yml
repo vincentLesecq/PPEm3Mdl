@@ -1,0 +1,27 @@
+LamMdlBundle_homepage:
+    pattern:  /
+    defaults: { _controller: LamMdlBundle:Default:index }
+LamMdlBundle_formationinformatique:
+    pattern:  /fi
+    defaults: { _controller: LamMdlBundle:FormationInformatique:liste }
+    
+LamMdlBundle_contenuformationinformatique:
+    pattern:  /contenufi/{num}
+    defaults: { _controller: LamMdlBundle:FormationInformatique:contenuinfo , num:1}
+
+LamMdlBundle_datesstageinfo:
+    pattern:  /datesstageinfo/{num}
+    defaults: { _controller: LamMdlBundle:FormationInformatique:stage , num:1}
+
+
+LamMdlBundle_formationsport:
+    pattern:  /fs
+    defaults: { _controller: LamMdlBundle:FormationSport:liste }    
+    
+LamMdlBundle_contenuformationsport:
+    pattern:  /contenufs/{num}
+    defaults: { _controller: LamMdlBundle:FormationSport:contenusport , num:1}
+
+LamMdlBundle_datesstagesport:
+    pattern:  /datesstagesport/{num}
+    defaults: { _controller: LamMdlBundle:FormationSport:stage , num:1}

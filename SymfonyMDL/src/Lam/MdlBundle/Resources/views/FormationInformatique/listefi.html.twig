@@ -1,0 +1,18 @@
+{% extends 'LamMdlBundle::layout.html.twig' %}
+
+{% block body %}
+
+{% set num=1 %}
+
+<h2>Il y a {{listeformationinfo|length}} formations informatiques : </h2>
+
+{% for uneFi in listeformationinfo %}
+	<h2>- Formation n° {{ num }} : </h2>    
+		<p>* <a href="{{ path('LamMdlBundle_contenuformationinformatique', { 'num': uneFi.id }) }}"> {{ uneFi.Titre }}  </a>   , et  
+                <a href="{{ path('LamMdlBundle_datesstageinfo', { 'num': uneFi.id }) }}"> Les Dates de Stages </a></p>
+
+        {% set num=num+1 %}
+{% endfor %}
+
+
+{% endblock %}

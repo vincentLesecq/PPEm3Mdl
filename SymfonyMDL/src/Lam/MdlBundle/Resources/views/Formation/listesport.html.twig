@@ -1,0 +1,34 @@
+{% extends 'LamMdlBundle::layout.html.twig' %}
+
+{% block body %}
+
+{% set nb=1 %}
+
+<h1>Les stages organisés pour la formation '{{ laF.Titre }}' sont:  </h1>
+
+
+
+
+  {% for unS in lesStages %}
+
+<a href="{{ path('LamMdlBundle_formationsport') }}"> Retour </a>
+     <h2>Stage {{nb}}</h2>
+      Date: {{ unS.Date|date('d-m-Y') }}</br>
+             Horaire:  {{ unS.Horaire }}</br>       
+             Salle: {{ unS.Salle }}</br>
+     
+        {% set nbi=  (unS.lesIntervenants|length)%}
+        {% if nbi>1  %}
+        <p>Intervenants : Les docteurs :</p>
+            {% else %}
+        <p>Intervenant : Le docteur :</p>
+            {% endif %}
+             
+        {% for unI in unS.lesIntervenants %}
+        <h3>- {{ unI.Prenom }} {{ unI.Nom }}</h3>
+      {% endfor %}
+  {% set nb=nb+1 %}
+  {% endfor %}
+
+
+{% endblock %}

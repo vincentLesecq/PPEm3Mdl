@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<header>
+        <meta charset="UTF-8" />
+        <title>{% block title %}La Maison des ligues de Lorraine{% endblock %}</title>
+		<link rel="stylesheet" href="{{ asset('bundles/LamMdl/css/styles.css') }}" type="text/css" media="all" />
+		<img src="{{ asset('bundles/LamMdl/images/logo.jpg') }}" alt="logo" width="430" height"430" />
+         
+</header>	
+
+<nav>
+{% block nav %}
+        
+        
+        
+        
+        
+        <ul><li><a class='lien' href="{{ path('LamMdlBundle_homepage') }}">Accueil</a></li>
+	<li><a class='lien' href="{{ path('LamMdlBundle_formationinformatique') }}" >Les formations informatiques</a></li>
+        <li><a class='lien' href="{{ path('LamMdlBundle_formationsport') }}" >Les formations sport/médecine</a></li>
+	
+{% endblock %}
+</nav>
+
+
+
+<article>
+{% block body %}
+
+        
+{% endblock %}
+</article>
+
+
+
+	
+<footer>
+<p>copyright ©</p>
+</footer>
+	
+	
+	
+</html>

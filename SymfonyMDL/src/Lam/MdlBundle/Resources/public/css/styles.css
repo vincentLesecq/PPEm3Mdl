@@ -1,0 +1,57 @@
+article{
+background: greenyellow;
+text-align:center;
+
+padding:10px;
+-moz-animation:myfirst 5s;
+}
+
+nav li {
+display:inline-block;
+margin:10px;
+background: aqua;
+border-radius: 30px;
+padding:20px;
+text-shadow:5px 5px 5px ;
+}
+
+nav a{
+color:blue;
+font-size: 20px;
+}
+
+footer{
+text-align:center;
+background: purple;
+color:white;
+padding-top: 0.4%;
+margin-top: 20px;
+height: 10%;
+}
+
+body{
+text-align:center;
+background: pink;
+font-size: 20px;
+ /* width : 980px;*/
+ width : 70%;
+ height: 70%;
+  margin : auto ;
+}
+
+li{
+list-style-type:none;
+}
+
+a{
+color: purple;
+}
+
+@-moz-keyframes myfirst{
+from {background:skyblue;}
+to {background: greenyellow;}
+}
+
+header{
+background: skyblue;
+}

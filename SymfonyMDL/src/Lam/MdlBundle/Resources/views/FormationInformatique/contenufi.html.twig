@@ -1,0 +1,36 @@
+{% extends 'LamMdlBundle::layout.html.twig' %}
+
+{% block body %}
+
+{% set numFi=0 %}
+{% set numO=0 %}
+
+<p><a href="{{ path('LamMdlBundle_formationinformatique') }}"> Retour </a></p>
+
+{% for unContenu in contenuformationinfo %}
+
+
+{% if numFi != unContenu.toto   %}
+{% set nom=asset('bundles/LamMdl/images/' ~ unContenu.Logo )%}
+<img src="{{ nom }}" alt="logo" width="130" height="100" />
+    <p> <h2>Nom de la formation : </h2>{{  unContenu.Titre }} </p>
+       <p> <h3>Objectif : </h3>{{  unContenu.Objectif }} </p>
+          <p> <h3>Public : </h3>{{  unContenu.Public }} </p>
+             <p> <h3>Prerequis : </h3>{{  unContenu.Prerequis }} </p>
+   <h3>Nombre de places : {{  unContenu.nbPlace }} </h3>
+<h4>Descriptif:</h4>
+    {% set numFi= unContenu.toto  %}
+{% endif %}
+
+    {% if numO != unContenu.Ordre   %}
+    <h5> {{  unContenu.Ordre }} {{ unContenu.NomTheme }} </h5>
+    {% set numO= unContenu.Ordre  %}
+{% endif %}
+			     {% if unContenu.Libelle != "" %}
+		<h6>*  {{ unContenu.Libelle }} </h6>
+                {% endif %}
+                  
+	{% endfor %}
+
+
+{% endblock %}
