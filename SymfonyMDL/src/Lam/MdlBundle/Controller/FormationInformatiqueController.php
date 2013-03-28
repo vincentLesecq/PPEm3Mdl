@@ -16,7 +16,7 @@ use Lam\MdlBundle\Entity\FormationInformatique;
 class FormationInformatiqueController extends Controller
 {
     
-    public function listeAction()
+public function listeAction()
     {$em = $this->getDoctrine()->getEntityManager();
         $listeformationinfo = $em->getRepository('LamMdlBundle:formationinformatique')->findAll();
                       

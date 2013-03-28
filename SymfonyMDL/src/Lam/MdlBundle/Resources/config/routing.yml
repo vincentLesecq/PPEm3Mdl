@@ -25,3 +25,6 @@ LamMdlBundle_contenuformationsport:
 LamMdlBundle_datesstagesport:
     pattern:  /datesstagesport/{num}
     defaults: { _controller: LamMdlBundle:FormationSport:stage , num:1}
+LamMdlBundle_inscription:
+    pattern:  /inscription
+    defaults: { _controller: LamMdlBundle:Default:inscription }

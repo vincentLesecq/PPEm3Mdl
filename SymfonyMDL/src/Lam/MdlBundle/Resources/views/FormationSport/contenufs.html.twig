@@ -5,7 +5,7 @@
 {% set numFi=0 %}
 {% set numO=0 %}
 
-<a href="{{ path('LamMdlBundle_formationsport') }}"> Retour </a>
+
 
 {% for unContenu in contenuformationsport %}
 
@@ -17,9 +17,7 @@
        <p> <h3>Objectif : </h3>{{  unContenu.Objectif }} </p>
  <h3>Nombre de places : {{  unContenu.nbPlace }} </h3>
 
-
-                  
-	{% endfor %}
-
+{% endfor %}
+<a href="{{ path('LamMdlBundle_formationsport') }}"> Retour </a>
 
 {% endblock %}
